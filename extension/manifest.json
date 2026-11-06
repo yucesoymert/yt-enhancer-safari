@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "YT Enhancer",
+  "version": "1.0",
+  "description": "Auto Picture-in-Picture and an Enhancer-style toolbar for YouTube in Safari.",
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "*://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": {
+      "48": "icons/48.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "js": [
+        "lib.js",
+        "content.js"
+      ],
+      "css": [
+        "bar.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1869123093C23700D10049 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1869113093C23700D10049 /* AppDelegate.swift */; };
+		FB1869163093C23700D10049 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = FB1869143093C23700D10049 /* Main.html */; };
+		FB1869183093C23700D10049 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1869173093C23700D10049 /* Icon.png */; };
+		FB18691A3093C23700D10049 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = FB1869193093C23700D10049 /* Style.css */; };
+		FB18691C3093C23700D10049 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = FB18691B3093C23700D10049 /* Script.js */; };
+		FB18691E3093C23700D10049 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18691D3093C23700D10049 /* ViewController.swift */; };
+		FB1869213093C23700D10049 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB18691F3093C23700D10049 /* Main.storyboard */; };
+		FB1869233093C23800D10049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1869223093C23800D10049 /* Assets.xcassets */; };
+		FB18692A3093C23800D10049 /* YT Enhancer Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB1869293093C23800D10049 /* YT Enhancer Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB18692F3093C23800D10049 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18692E3093C23800D10049 /* SafariWebExtensionHandler.swift */; };
+		FB1869443093C23800D10049 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = FB18693B3093C23800D10049 /* background.js */; };
+		FB1869453093C23800D10049 /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = FB18693C3093C23800D10049 /* options.js */; };
+		FB1869463093C23800D10049 /* lib.js in Resources */ = {isa = PBXBuildFile; fileRef = FB18693D3093C23800D10049 /* lib.js */; };
+		FB1869473093C23800D10049 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = FB18693E3093C23800D10049 /* main.js */; };
+		FB1869483093C23800D10049 /* bar.css in Resources */ = {isa = PBXBuildFile; fileRef = FB18693F3093C23800D10049 /* bar.css */; };
+		FB1869493093C23800D10049 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = FB1869403093C23800D10049 /* icons */; };
+		FB18694A3093C23800D10049 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = FB1869413093C23800D10049 /* manifest.json */; };
+		FB18694B3093C23800D10049 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = FB1869423093C23800D10049 /* options.html */; };
+		FB18694C3093C23800D10049 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = FB1869433093C23800D10049 /* content.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB18692B3093C23800D10049 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB1869063093C23700D10049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB1869283093C23800D10049;
+			remoteInfo = "YT Enhancer Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB1869363093C23800D10049 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				FB18692A3093C23800D10049 /* YT Enhancer Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB18690E3093C23700D10049 /* YT Enhancer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YT Enhancer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1869113093C23700D10049 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB1869153093C23700D10049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		FB1869173093C23700D10049 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FB1869193093C23700D10049 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		FB18691B3093C23700D10049 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		FB18691D3093C23700D10049 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB1869203093C23700D10049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB1869223093C23800D10049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB1869243093C23800D10049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB1869293093C23800D10049 /* YT Enhancer Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YT Enhancer Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB18692E3093C23800D10049 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		FB1869303093C23800D10049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB18693B3093C23800D10049 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../../extension/background.js; sourceTree = "<group>"; };
+		FB18693C3093C23800D10049 /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = ../../../extension/options.js; sourceTree = "<group>"; };
+		FB18693D3093C23800D10049 /* lib.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = lib.js; path = ../../../extension/lib.js; sourceTree = "<group>"; };
+		FB18693E3093C23800D10049 /* main.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = main.js; path = ../../../extension/main.js; sourceTree = "<group>"; };
+		FB18693F3093C23800D10049 /* bar.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = bar.css; path = ../../../extension/bar.css; sourceTree = "<group>"; };
+		FB1869403093C23800D10049 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../extension/icons; sourceTree = "<group>"; };
+		FB1869413093C23800D10049 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
+		FB1869423093C23800D10049 /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = ../../../extension/options.html; sourceTree = "<group>"; };
+		FB1869433093C23800D10049 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../../extension/content.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB18690B3093C23700D10049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		FB1869263093C23800D10049 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB1869053093C23700D10049 = {
+			isa = PBXGroup;
+			children = (
+				FB1869103093C23700D10049 /* YT Enhancer */,
+				FB18692D3093C23800D10049 /* YT Enhancer Extension */,
+				FB18690F3093C23700D10049 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB18690F3093C23700D10049 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB18690E3093C23700D10049 /* YT Enhancer.app */,
+				FB1869293093C23800D10049 /* YT Enhancer Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB1869103093C23700D10049 /* YT Enhancer */ = {
+			isa = PBXGroup;
+			children = (
+				FB1869113093C23700D10049 /* AppDelegate.swift */,
+				FB18691D3093C23700D10049 /* ViewController.swift */,
+				FB18691F3093C23700D10049 /* Main.storyboard */,
+				FB1869223093C23800D10049 /* Assets.xcassets */,
+				FB1869243093C23800D10049 /* Info.plist */,
+				FB1869133093C23700D10049 /* Resources */,
+			);
+			path = "YT Enhancer";
+			sourceTree = "<group>";
+		};
+		FB1869133093C23700D10049 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB1869143093C23700D10049 /* Main.html */,
+				FB1869173093C23700D10049 /* Icon.png */,
+				FB1869193093C23700D10049 /* Style.css */,
+				FB18691B3093C23700D10049 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB18692D3093C23800D10049 /* YT Enhancer Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FB18693A3093C23800D10049 /* Resources */,
+				FB18692E3093C23800D10049 /* SafariWebExtensionHandler.swift */,
+				FB1869303093C23800D10049 /* Info.plist */,
+			);
+			path = "YT Enhancer Extension";
+			sourceTree = "<group>";
+		};
+		FB18693A3093C23800D10049 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB18693B3093C23800D10049 /* background.js */,
+				FB18693C3093C23800D10049 /* options.js */,
+				FB18693D3093C23800D10049 /* lib.js */,
+				FB18693E3093C23800D10049 /* main.js */,
+				FB18693F3093C23800D10049 /* bar.css */,
+				FB1869403093C23800D10049 /* icons */,
+				FB1869413093C23800D10049 /* manifest.json */,
+				FB1869423093C23800D10049 /* options.html */,
+				FB1869433093C23800D10049 /* content.js */,
+			);
+			name = Resources;
+			path = "YT Enhancer Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB18690D3093C23700D10049 /* YT Enhancer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1869373093C23800D10049 /* Build configuration list for PBXNativeTarget "YT Enhancer" */;
+			buildPhases = (
+				FB18690A3093C23700D10049 /* Sources */,
+				FB18690B3093C23700D10049 /* Frameworks */,
+				FB18690C3093C23700D10049 /* Resources */,
+				FB1869363093C23800D10049 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB18692C3093C23800D10049 /* PBXTargetDependency */,
+			);
+			name = "YT Enhancer";
+			productName = "YT Enhancer";
+			productReference = FB18690E3093C23700D10049 /* YT Enhancer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB1869283093C23800D10049 /* YT Enhancer Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1869333093C23800D10049 /* Build configuration list for PBXNativeTarget "YT Enhancer Extension" */;
+			buildPhases = (
+				FB1869253093C23800D10049 /* Sources */,
+				FB1869263093C23800D10049 /* Frameworks */,
+				FB1869273093C23800D10049 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "YT Enhancer Extension";
+			productName = "YT Enhancer Extension";
+			productReference = FB1869293093C23800D10049 /* YT Enhancer Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB1869063093C23700D10049 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2710;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					FB18690D3093C23700D10049 = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					FB1869283093C23800D10049 = {
+						CreatedOnToolsVersion = 27.1;
+					};
+				};
+			};
+			buildConfigurationList = FB1869093093C23700D10049 /* Build configuration list for PBXProject "YT Enhancer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB1869053093C23700D10049;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FB18690F3093C23700D10049 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB18690D3093C23700D10049 /* YT Enhancer */,
+				FB1869283093C23800D10049 /* YT Enhancer Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB18690C3093C23700D10049 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				FB1869183093C23700D10049 /* Icon.png in Resources */,
+				FB1869213093C23700D10049 /* Main.storyboard in Resources */,
+				FB18691C3093C23700D10049 /* Script.js in Resources */,
+				FB1869163093C23700D10049 /* Main.html in Resources */,
+				FB1869233093C23800D10049 /* Assets.xcassets in Resources */,
+				FB18691A3093C23700D10049 /* Style.css in Resources */,
+			);
+		};
+		FB1869273093C23800D10049 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				FB1869443093C23800D10049 /* background.js in Resources */,
+				FB18694A3093C23800D10049 /* manifest.json in Resources */,
+				FB1869483093C23800D10049 /* bar.css in Resources */,
+				FB18694B3093C23800D10049 /* options.html in Resources */,
+				FB1869463093C23800D10049 /* lib.js in Resources */,
+				FB1869493093C23800D10049 /* icons in Resources */,
+				FB18694C3093C23800D10049 /* content.js in Resources */,
+				FB1869453093C23800D10049 /* options.js in Resources */,
+				FB1869473093C23800D10049 /* main.js in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB18690A3093C23700D10049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				FB18691E3093C23700D10049 /* ViewController.swift in Sources */,
+				FB1869123093C23700D10049 /* AppDelegate.swift in Sources */,
+			);
+		};
+		FB1869253093C23800D10049 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				FB18692F3093C23800D10049 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB18692C3093C23800D10049 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB1869283093C23800D10049 /* YT Enhancer Extension */;
+			targetProxy = FB18692B3093C23800D10049 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB1869143093C23700D10049 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1869153093C23700D10049 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		FB18691F3093C23700D10049 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1869203093C23700D10049 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB1869313093C23800D10049 /* Debug configuration for PBXProject "YT Enhancer" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB1869323093C23800D10049 /* Release configuration for PBXProject "YT Enhancer" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FB1869343093C23800D10049 /* Debug configuration for PBXNativeTarget "YT Enhancer Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YT Enhancer Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Enhancer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mertyucesoy.ytenhancer.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB1869353093C23800D10049 /* Release configuration for PBXNativeTarget "YT Enhancer Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YT Enhancer Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Enhancer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mertyucesoy.ytenhancer.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FB1869383093C23800D10049 /* Debug configuration for PBXNativeTarget "YT Enhancer" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YT Enhancer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Enhancer";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mertyucesoy.ytenhancer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB1869393093C23800D10049 /* Release configuration for PBXNativeTarget "YT Enhancer" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YT Enhancer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YT Enhancer";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mertyucesoy.ytenhancer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB1869093093C23700D10049 /* Build configuration list for PBXProject "YT Enhancer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1869313093C23800D10049 /* Debug configuration for PBXProject "YT Enhancer" */,
+				FB1869323093C23800D10049 /* Release configuration for PBXProject "YT Enhancer" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		FB1869333093C23800D10049 /* Build configuration list for PBXNativeTarget "YT Enhancer Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1869343093C23800D10049 /* Debug configuration for PBXNativeTarget "YT Enhancer Extension" */,
+				FB1869353093C23800D10049 /* Release configuration for PBXNativeTarget "YT Enhancer Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		FB1869373093C23800D10049 /* Build configuration list for PBXNativeTarget "YT Enhancer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1869383093C23800D10049 /* Debug configuration for PBXNativeTarget "YT Enhancer" */,
+				FB1869393093C23800D10049 /* Release configuration for PBXNativeTarget "YT Enhancer" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB1869063093C23700D10049 /* Project object */;
+	validationLevel = 1;
+}

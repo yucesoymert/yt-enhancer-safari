@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>YT Enhancer</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px/1.5 system-ui; margin: 16px; min-width: 360px; }
+  [role=tablist] { display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 1px solid #8884; }
+  [role=tab] { font: inherit; padding: 6px 12px; border: 0; border-bottom: 2px solid transparent; background: none; color: inherit; cursor: pointer; }
+  [role=tab][aria-selected=true] { border-bottom-color: #e52d27; font-weight: 600; }
+  [role=tab]:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #3ea6ff; outline-offset: 2px; }
+  fieldset { border: 1px solid #8884; border-radius: 10px; margin: 0 0 12px; padding: 8px 14px; }
+  legend { font-weight: 600; }
+  label { display: block; margin: 6px 0; }
+  input[type=number] { width: 64px; }
+  table { border-collapse: collapse; width: 100%; }
+  td { padding: 6px 4px; border-bottom: 1px solid #8882; }
+  td:first-child { white-space: nowrap; width: 1%; padding-right: 16px; }
+  kbd { font: 12px ui-monospace, monospace; padding: 2px 6px; border: 1px solid #8886; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div role="tablist" aria-label="Bölümler">
+  <button role="tab" id="t-settings" aria-controls="p-settings" aria-selected="true">Ayarlar</button>
+  <button role="tab" id="t-keys" aria-controls="p-keys" aria-selected="false" tabindex="-1">Kısayollar</button>
+</div>
+
+<form id="p-settings" role="tabpanel" aria-labelledby="t-settings">
+  <fieldset>
+    <legend>Otomatik PiP</legend>
+    <label><input type="checkbox" name="autoPipTab"> Sekme değişince / pencere küçülünce</label>
+    <label><input type="checkbox" name="autoPipCovered"> Başka bir pencere videonun yarısından fazlasını kapatınca</label>
+    <label><input type="checkbox" name="autoPipScroll"> Player ekrandan çıkınca (scroll)</label>
+  </fieldset>
+  <fieldset>
+    <legend>Hız</legend>
+    <label>Varsayılan hız <input type="number" name="defaultSpeed" min="0.1" max="16" step="0.05"></label>
+    <label>Adım <input type="number" name="speedStep" min="0.01" max="1" step="0.01"></label>
+    <label><input type="checkbox" name="wheelSpeed"> Ctrl + tekerlek (veya trackpad pinch) ile hız</label>
+  </fieldset>
+  <fieldset>
+    <legend>Ses</legend>
+    <label><input type="checkbox" name="wheelVolume"> ⌥ + tekerlek ile ses</label>
+    <label>Adım (%) <input type="number" name="volumeStep" min="1" max="25"></label>
+  </fieldset>
+  <fieldset>
+    <legend>Kalite</legend>
+    <label>Varsayılan kalite
+      <select name="defaultQuality">
+        <option value="auto">Otomatik</option>
+        <option value="hd2160">2160p</option>
+        <option value="hd1440">1440p</option>
+        <option value="hd1080">1080p</option>
+        <option value="hd720">720p</option>
+        <option value="large">480p</option>
+        <option value="medium">360p</option>
+      </select>
+    </label>
+  </fieldset>
+</form>
+
+<section id="p-keys" role="tabpanel" aria-labelledby="t-keys" hidden>
+  <table>
+    <tbody id="keys"></tbody>
+    <tbody>
+      <tr><td><kbd>Ctrl</kbd> + tekerlek / pinch</td><td>Hız (player üzerindeyken)</td></tr>
+      <tr><td><kbd>⌥</kbd> + tekerlek</td><td>Ses (player üzerindeyken)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<script src="lib.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
