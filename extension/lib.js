@@ -2,8 +2,8 @@
 globalThis.YTE = {
   DEFAULTS: {
     autoPipTab: true,     // sekme değişince / pencere küçülünce PiP
-    autoPipCovered: true, // Safari arkadayken videonun yarısından fazlası başka pencerelerin altında kalınca PiP
     autoPipScroll: false, // player ekrandan çıkınca PiP
+    pipCloseKeepsPlaying: false, // PiP X ile kapanınca, sekme arkadaysa video çalmaya devam etsin
     defaultSpeed: 1,
     speedStep: 0.05,
     wheelSpeed: true,     // Ctrl + tekerlek (trackpad pinch) = hız

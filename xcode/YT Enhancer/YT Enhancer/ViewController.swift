@@ -9,7 +9,7 @@ import Cocoa
 import SafariServices
 import WebKit
 
-let extensionBundleIdentifier = "com.mertyucesoy.ytenhancer.Extension"
+let extensionBundleIdentifier = Bundle.main.bundleIdentifier! + ".Extension"
 
 class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {
 

@@ -31,34 +31,23 @@ function togglePip() { const v = video(); autoPip = false; setPip(v, !inPip(v));
 document.addEventListener('visibilitychange', () => {
   if (cfg.autoPipTab) document.hidden ? autoEnter() : autoExit();
 });
-// Covered by another window: Safari doesn't report that to the page, so while Safari is unfocused we ask the
-// native side (SafariWebExtensionHandler.swift) how much of the player is under other windows.
-// ponytail: 500 ms polling, only while Safari is unfocused. No OS event reaches a web page.
-let coverTimer;
-addEventListener('blur', () => { if (cfg.autoPipCovered && !coverTimer) coverTimer = setInterval(checkCovered, 500); });
-addEventListener('focus', () => {
-  clearInterval(coverTimer);
-  coverTimer = null;
-  if (!document.hidden) autoExit();
-});
 
-async function checkCovered() {
-  const v = video(), p = player();
-  if (document.hidden || document.hasFocus() || !p || !(playing(v) || autoPip)) return;
-  // Player box clipped to the viewport, in screen points.
-  // ponytail: assumes all Safari chrome sits above the page and zoom is 100%; use devicePixelRatio if zoom matters.
-  const r = p.getBoundingClientRect(), top = screenY + outerHeight - innerHeight;
-  const left = Math.max(0, r.left), right = Math.min(innerWidth, r.right);
-  const upper = Math.max(0, r.top), lower = Math.min(innerHeight, r.bottom);
-  if (right <= left || lower <= upper) return; // scrolled away; the scroll trigger owns that case
-  const res = await browser.runtime.sendMessage({ covered: {
-    x: screenX + left, y: top + upper, w: right - left, h: lower - upper,
-    wx: screenX, wy: screenY, ww: outerWidth, wh: outerHeight,
-  } }).catch(() => null);
-  const c = res?.covered ?? 0;
-  if (c >= 0.5) autoEnter();
-  else if (c < 0.2) autoExit(); // gap between 0.2 and 0.5 stops flapping while a window is dragged over
-}
+// X on the PiP window pauses the video. With pipCloseKeepsPlaying, resume it if the tab is in the background,
+// so PiP closes without Safari taking focus (the native "back to tab" button always activates Safari).
+// Safari's pause and the mode change come in either order, so a pause within 500 ms of leaving PiP counts as the X.
+// ponytail: 500 ms window is a guess; a manual pause right before X within that window would also be undone.
+let pipExitAt = -Infinity, pauseAt = 0; // -Infinity: no PiP exit yet, so no pause matches
+const resumeAfterX = v => { if (cfg.pipCloseKeepsPlaying && document.hidden && v.paused && Math.abs(pipExitAt - pauseAt) < 500) v.play().catch(() => {}); };
+document.addEventListener('webkitpresentationmodechanged', e => {
+  if (e.target !== video() || inPip(e.target)) return;
+  pipExitAt = e.timeStamp;
+  resumeAfterX(e.target);
+}, true);
+document.addEventListener('pause', e => {
+  if (e.target !== video()) return;
+  pauseAt = e.timeStamp;
+  if (!inPip(e.target)) resumeAfterX(e.target);
+}, true);
 
 const io = new IntersectionObserver(([e]) => {
   playerVisible = e.intersectionRatio >= 0.1;
